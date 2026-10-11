@@ -13,6 +13,45 @@ body {
     margin-bottom: 5px;
 }
 
+.related-work-link {
+  align-items: center;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+  gap: 0.45rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.related-work-label {
+  background: #eef1f4;
+  border-radius: 999px;
+  color: #4a4a4a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  padding: 0.25rem 0.6rem;
+  text-transform: uppercase;
+}
+
+.related-work-title {
+  font-weight: 600;
+}
+
+.related-work-resource {
+  align-items: center;
+  color: hsl(204, 86%, 45%);
+  display: inline-flex;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.related-work-resource:hover {
+  text-decoration: underline;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -55,16 +94,65 @@ body {
     font-family: 'Google Sans', sans-serif;
 }
 
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+.publication-recognition {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin: -0.35rem auto 1.25rem;
 }
 
-.publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
+.venue-badge,
+.award-badge {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 5px 2px;
+  padding: 0.55rem 0.9rem;
+  vertical-align: middle;
+}
+
+.venue-badge {
+  background: linear-gradient(135deg, #f1f7ff 0%, #dcecff 100%);
+  border: 1px solid #8bb9e8;
+  box-shadow: 0 2px 8px rgba(32, 101, 170, 0.12);
+  color: #205f9f;
+}
+
+.award-badge {
+  background: linear-gradient(135deg, #fff9db 0%, #ffe08a 100%);
+  border: 1px solid #e4b83f;
+  box-shadow: 0 2px 8px rgba(145, 105, 0, 0.14);
+  color: #6f4e00;
+}
+
+.venue-badge .icon {
+  color: #3273b9;
+  flex: 0 0 auto;
+  margin-right: 0.35rem;
+}
+
+.award-badge .icon {
+  color: #c58b00;
+  flex: 0 0 auto;
+  margin-right: 0.35rem;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-recognition {
+    flex-direction: column;
+  }
+
+  .venue-badge,
+  .award-badge {
+    border-radius: 0.75rem;
+    justify-content: center;
+  }
 }
 
 .publication-authors {
